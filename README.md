@@ -43,7 +43,7 @@ The original test code is simple **(one passed test, one failed test, one measur
 
 Currently, you should use XLTestLog with [XcodeColors]. If you don't, it would show the color code in the logs.
 
-In the next release, XLTestLog will [read the environment variable `XcodeColors`](https://github.com/robbiehanson/XcodeColors#option-1-manual-use--custom-macros) to decide whether using XcodeColors to paint log messages.
+In the next release, XLTestLog will [read the environment variable `XcodeColors`](https://github.com/robbiehanson/XcodeColors#option-1-manual-use--custom-macros) to decide whether using XcodeColors to paint log messages or not.
 
 
 
