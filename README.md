@@ -70,7 +70,7 @@ You can install XLTestLog manually via adding files in `XLTestLog/` directory in
 
 ### Contribution
 
-Any help would be most welcome. Even beer. :p
+Any help would be most welcome. Even buy me a beer. :p
 
 
 ### Author
