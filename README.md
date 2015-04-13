@@ -6,11 +6,11 @@
  - Use indentations and Emoji bullets to distinguish between different logs.
  - Paint log messages and highlight important keywords using [XcodeColors].
 
-![](./Docs/withXLTestLog.png)
+![](./Docs/Images/withXLTestLog.png)
 
 The original test code is simple **(one passed test, one failed test, one measure task, and one message from`NSLog()`)** but has poor readability in Xcode Console without XLTestLog:
 
-![](./Docs/withoutXLTestLog.png)
+![](./Docs/Images/withoutXLTestLog.png)
 
 ```objc
 @implementation XLTestLogDevTests
