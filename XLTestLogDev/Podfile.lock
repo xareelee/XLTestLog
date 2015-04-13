@@ -1,0 +1,22 @@
+PODS:
+  - XAspect (1.0.3):
+    - XAspect/Core (= 1.0.3)
+    - XAspect/Macros (= 1.0.3)
+  - XAspect/Core (1.0.3):
+    - XAspect/Macros
+  - XAspect/Macros (1.0.3)
+  - XLTestLog (1.0.0):
+    - XAspect
+
+DEPENDENCIES:
+  - XLTestLog (from `./../`)
+
+EXTERNAL SOURCES:
+  XLTestLog:
+    :path: "./../"
+
+SPEC CHECKSUMS:
+  XAspect: 8c6703478e01d97f5511615af3ff3546706cb3b8
+  XLTestLog: 3327d4edfb902b548d6fd03cdbe5431d63b89d63
+
+COCOAPODS: 0.36.3

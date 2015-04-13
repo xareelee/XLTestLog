@@ -1,0 +1,2 @@
+PODS_XLTESTLOGDEVTESTS_XLTESTLOG_FRAMEWORK_SEARCH_PATHS = $(inherited) "$(SDKROOT)/Developer/Library/Frameworks" "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+PODS_XLTESTLOGDEVTESTS_XLTESTLOG_OTHER_LDFLAGS = -framework "Foundation" -framework "XCTest"
