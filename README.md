@@ -56,7 +56,9 @@ Before installing XLTestLog, please read the section **Release Notes**.
 You can install XLTestLog simply via [CocoaPods]:
 
 ```
-pod 'XLTestLog'
+target :MyAppTests do
+  pod 'XLTestLog'
+end
 ```
 
 
