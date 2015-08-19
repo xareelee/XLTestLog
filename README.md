@@ -48,7 +48,7 @@ No code is needed to use XLTestLog.
 
 1. Include XLTestLog in your test target (see [Installation section](#installation)).
 2. Install [XcodeColors] plugin.
-3. Run your test.
+3. Just run your test, and see the delightful logs in the Xcode Console.
 
 
 ## Release Notes
