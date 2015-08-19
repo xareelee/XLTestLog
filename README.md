@@ -10,9 +10,13 @@ This is an example using XLTestLog:
 
 ![](./Docs/Images/withXLTestLog.png)
 
-The original test code is simple **(one passed test, one failed test, one measure task, and one message from`NSLog()`)** but has poor readability in Xcode Console without XLTestLog:
+
+And this is without using XLTestLog:
 
 ![](./Docs/Images/withoutXLTestLog.png)
+
+
+The readability between them is quite different. The original test code for the console logs is simple **(one passed test, one failed test, one measure task, and one message from`NSLog()`)**:
 
 ```objc
 @implementation XLTestLogDevTests
@@ -37,6 +41,14 @@ The original test code is simple **(one passed test, one failed test, one measur
 }
 @end
 ```
+
+## How to use
+
+No code is needed to use XLTestLog.
+
+1. Include XLTestLog in your test target (see [Installation section](#installation)).
+2. Install [XcodeColors] plugin.
+3. Run your test.
 
 
 ## Release Notes
