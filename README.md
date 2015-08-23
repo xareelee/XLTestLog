@@ -6,7 +6,7 @@
  - Use indentations and Emoji bullets to distinguish between different logs.
  - Paint log messages and highlight important keywords using [XcodeColors].
 
-This is an example using XLTestLog:
+This is an example for test results in Xcode Console using XLTestLog:
 
 ![](./Docs/Images/withXLTestLog.png)
 
@@ -44,7 +44,7 @@ The readability between them is quite different. The original test code for the 
 
 ## How to use
 
-No code is needed to use XLTestLog.
+No additional code is needed to use XLTestLog.
 
 1. Include XLTestLog in your test target (see [Installation section](#installation)).
 2. Install [XcodeColors] plugin.
