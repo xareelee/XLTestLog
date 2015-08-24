@@ -3,10 +3,11 @@
 **XLTestLog** is a lightweight library for stylish XCTest logs. It makes your testing logs more readable in Xcode Console.
 
  - Reformat the log messages to make them more readable.
- - Use indentations and Emoji bullets to distinguish between different logs.
+ - Use indentations and Emoji bullets for different logs.
  - Paint log messages and highlight important keywords using [XcodeColors].
+ - Only test logs will be styled. You can distinguish colored test logs from other logs (e.g. `NSLog()`).
 
-This is an example for test results in Xcode Console using XLTestLog:
+The following is an example for test results in Xcode Console using XLTestLog:
 
 ![](./Docs/Images/withXLTestLog.png)
 
