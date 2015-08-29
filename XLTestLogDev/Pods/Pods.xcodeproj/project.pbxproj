@@ -204,7 +204,10 @@
 				76F482D515102A17040B524E /* Products */,
 				4E53B1A96FFB08A14248A244 /* Targets Support Files */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
 		};
 		4E53B1A96FFB08A14248A244 /* Targets Support Files */ = {
 			isa = PBXGroup;
