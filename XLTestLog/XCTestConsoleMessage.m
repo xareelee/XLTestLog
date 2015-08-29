@@ -90,7 +90,8 @@
 #pragma clang diagnostic ignored "-Wdeprecated"
   Method testLogWithFormat = class_getInstanceMethod([XCTestLog class], @selector(testLogWithFormat:arguments:));
   method_setImplementation(testLogWithFormat, imp_implementationWithBlock(^(XCTestLog *testLog, NSString *format, va_list arguments) {
-    printf("%s", [[XCTestConsoleMessage testLogWithFormat:format arguments:arguments] UTF8String]);
+    NSString *message = [XCTestConsoleMessage testLogWithFormat:format arguments:arguments];
+    [testLog.logFileHandle writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
   }));
 #pragma clang diagnostic pop
 }
