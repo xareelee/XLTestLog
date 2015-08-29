@@ -25,6 +25,9 @@
 
 #import "XCTestConsoleMessage.h"
 
+#import <XCTest/XCTestLog.h>
+#import <objc/runtime.h>
+
 // =============================================================================
 // XcodeColor coloring macros
 #define XCOLORS_ESCAPE @"\033["
@@ -80,6 +83,17 @@
 
 // =============================================================================
 @implementation XCTestConsoleMessage
+
++ (void)load
+{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+  Method testLogWithFormat = class_getInstanceMethod([XCTestLog class], @selector(testLogWithFormat:arguments:));
+  method_setImplementation(testLogWithFormat, imp_implementationWithBlock(^(XCTestLog *testLog, NSString *format, va_list arguments) {
+    printf("%s", [[XCTestConsoleMessage testLogWithFormat:format arguments:arguments] UTF8String]);
+  }));
+#pragma clang diagnostic pop
+}
 
 // Analyze the format and the arguments to return a new format for console log.
 + (NSString *)testLogWithFormat:(NSString *)format arguments:(va_list)arguments

@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.8'
 
   s.frameworks = 'Foundation', 'XCTest'
-  s.dependency 'XAspect'
 
   s.source_files = 'XLTestLog/*.{h,m}'
 
