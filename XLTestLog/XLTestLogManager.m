@@ -95,6 +95,9 @@
 {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated"
+  // Although XCTestLog has been flagged as a deprecated class, Apple still uses
+  // it to log test results. We intercept the message to `-testLogWithFormat:arguments:`
+  // and reformat the test logs.
   Method testLogWithFormat = class_getInstanceMethod([XCTestLog class], @selector(testLogWithFormat:arguments:));
   method_setImplementation(testLogWithFormat, imp_implementationWithBlock(^(XCTestLog *testLog, NSString *format, va_list arguments) {
     NSString *message = [[XLTestLogManager sharedManager] testLogWithFormat:format arguments:arguments];
