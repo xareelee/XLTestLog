@@ -22,10 +22,5 @@
     "Foundation",
     "XCTest"
   ],
-  "dependencies": {
-    "XAspect": [
-
-    ]
-  },
   "source_files": "XLTestLog/*.{h,m}"
 }

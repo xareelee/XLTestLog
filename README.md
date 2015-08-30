@@ -79,7 +79,7 @@ end
 
 ### Manually
 
-You can install XLTestLog manually via adding files in `XLTestLog/` directory into your project. You also need to install [XAspect] library to use XLTestLog.
+You can install XLTestLog manually via adding files in `XLTestLog/` directory into your project.
 
 
 
@@ -102,5 +102,4 @@ XLTestLog is available under the MIT license. See the [LICENSE] file for more in
 
 [CocoaPods]: https://cocoapods.org
 [XcodeColors]: https://github.com/robbiehanson/XcodeColors
-[XAspect]: https://github.com/xareelee/XAspect
 [LICENSE]: ./LICENSE.md

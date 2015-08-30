@@ -25,6 +25,12 @@
 
 #import "XCTestConsoleMessage.h"
 
+#import <XCTest/XCTestLog.h>
+#import <objc/runtime.h>
+
+#pragma clang diagnostic ignored "-Wunused-macros"
+#pragma clang diagnostic ignored "-Wformat-nonliteral"
+
 // =============================================================================
 // XcodeColor coloring macros
 #define XCOLORS_ESCAPE @"\033["
@@ -80,6 +86,18 @@
 
 // =============================================================================
 @implementation XCTestConsoleMessage
+
++ (void)load
+{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+  Method testLogWithFormat = class_getInstanceMethod([XCTestLog class], @selector(testLogWithFormat:arguments:));
+  method_setImplementation(testLogWithFormat, imp_implementationWithBlock(^(XCTestLog *testLog, NSString *format, va_list arguments) {
+    NSString *message = [XCTestConsoleMessage testLogWithFormat:format arguments:arguments];
+    [testLog.logFileHandle writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
+  }));
+#pragma clang diagnostic pop
+}
 
 // Analyze the format and the arguments to return a new format for console log.
 + (NSString *)testLogWithFormat:(NSString *)format arguments:(va_list)arguments
@@ -355,27 +373,27 @@
     results = [results substringFromIndex:range.location + range.length];
   }];
   
-  __attribute__((unused)) NSString *testLocation                        = infoInArguments[0];
-  __attribute__((unused)) NSString *testCase                            = infoInArguments[1];
-  __attribute__((unused)) NSString *averageTime                         = infoInArguments[2];
-  __attribute__((unused)) NSString *relativeStandardDeviation           = infoInArguments[3];
-  __attribute__((unused)) NSString *sample1                             = infoInArguments[4];
-  __attribute__((unused)) NSString *sample2                             = infoInArguments[5];
-  __attribute__((unused)) NSString *sample3                             = infoInArguments[6];
-  __attribute__((unused)) NSString *sample4                             = infoInArguments[7];
-  __attribute__((unused)) NSString *sample5                             = infoInArguments[8];
-  __attribute__((unused)) NSString *sample6                             = infoInArguments[9];
-  __attribute__((unused)) NSString *sample7                             = infoInArguments[10];
-  __attribute__((unused)) NSString *sample8                             = infoInArguments[11];
-  __attribute__((unused)) NSString *sample9                             = infoInArguments[12];
-  __attribute__((unused)) NSString *sample10                            = infoInArguments[13];
-  __attribute__((unused)) NSString *metricID                            = infoInArguments[14];
-  __attribute__((unused)) NSString *baselineName                        = infoInArguments[15];
-  __attribute__((unused)) NSString *baselineAverage                     = infoInArguments[16];
-  __attribute__((unused)) NSString *maxPercentRegression                = infoInArguments[17];
-  __attribute__((unused)) NSString *maxPercentRelativeStandardDeviation = infoInArguments[18];
-  __attribute__((unused)) NSString *maxRegression                       = infoInArguments[19];
-  __attribute__((unused)) NSString *maxStandardDeviation                = results;
+  NSString *testLocation                        = infoInArguments[0];
+  NSString *testCase                            = infoInArguments[1];
+//NSString *averageTime                         = infoInArguments[2];
+  NSString *relativeStandardDeviation           = infoInArguments[3];
+  NSString *sample1                             = infoInArguments[4];
+  NSString *sample2                             = infoInArguments[5];
+  NSString *sample3                             = infoInArguments[6];
+  NSString *sample4                             = infoInArguments[7];
+  NSString *sample5                             = infoInArguments[8];
+  NSString *sample6                             = infoInArguments[9];
+  NSString *sample7                             = infoInArguments[10];
+  NSString *sample8                             = infoInArguments[11];
+  NSString *sample9                             = infoInArguments[12];
+  NSString *sample10                            = infoInArguments[13];
+//NSString *metricID                            = infoInArguments[14];
+//NSString *baselineName                        = infoInArguments[15];
+//NSString *baselineAverage                     = infoInArguments[16];
+//NSString *maxPercentRegression                = infoInArguments[17];
+//NSString *maxPercentRelativeStandardDeviation = infoInArguments[18];
+//NSString *maxRegression                       = infoInArguments[19];
+//NSString *maxStandardDeviation                = results;
   
   
   // Construct the new measurement log

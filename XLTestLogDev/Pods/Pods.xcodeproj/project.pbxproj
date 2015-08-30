@@ -7,507 +7,273 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		027FA0D426FAA745E3328870 /* XAObjcMetaprogramming.h in Headers */ = {isa = PBXBuildFile; fileRef = 52F66F04B3FC2675341B11B1 /* XAObjcMetaprogramming.h */; };
-		0DCA6A7BE7DA2E7542100449 /* XACrystallization.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A09BAACEF7DEFB6249B0AB1 /* XACrystallization.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		32F25D66F00F2A18E2504B3C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBD442C4D35817C175C3A6B /* XCTest.framework */; };
-		3BF9854EC4D9F41329A1EBA1 /* Pods-XLTestLogDevTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 194443047AB0F215739103AA /* Pods-XLTestLogDevTests-dummy.m */; };
-		3CA5CCF9176790E78D49914B /* XAWeaveHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FF6B2F91695C102EBED25B /* XAWeaveHandler.h */; };
-		47B962FB1E713069A2E5E8B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C234B1B3B15B56ABAAFFB1 /* Foundation.framework */; };
-		598214E07C05A47F1DDBF144 /* Pods-XLTestLogDevTests-XAspect-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C399F31F6A36D2321B661B99 /* Pods-XLTestLogDevTests-XAspect-dummy.m */; };
-		6D87E01151C531C30EB2F611 /* XAspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CC200F83AC5B0A117C38F4 /* XAspect.h */; };
-		704AF07AC4D2605A869412DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C234B1B3B15B56ABAAFFB1 /* Foundation.framework */; };
-		72F4AFAA761CCEB3A2BBCF1D /* XADebugMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 01034F6B83447C3D986AA8F9 /* XADebugMacros.h */; };
-		7C71D9B53573E89109255F1A /* XAFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 49377EA6692932352A0C523C /* XAFoundation.h */; };
-		A2CC9657416E6DD3FDE84458 /* XACrystallization.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7A6AC67CB852069AFDB65B /* XACrystallization.h */; };
-		C0BA209FD65F0671413376D3 /* XACExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 03C774E1C2D5E51E62931403 /* XACExtensions.h */; };
-		D495B73FD88D6D6F7A498CE6 /* XAExtObjcMetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 628C2817C2BDFFD1026AAD21 /* XAExtObjcMetamacros.h */; };
-		D4D92B03A63773753C7908FB /* Aspect-XCTestConsoleMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 81707657EC1FA06400BA874A /* Aspect-XCTestConsoleMessage.m */; };
-		E38EA4A5721825A3691FAA57 /* Pods-XLTestLogDevTests-XLTestLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495FEB49EEC15FAD28BC995 /* Pods-XLTestLogDevTests-XLTestLog-dummy.m */; };
-		E4E07BAFD080DC5475C1C8BB /* XCTestConsoleMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F1539755239CC6F3C6CE88 /* XCTestConsoleMessage.m */; };
-		F3BED5974E6E57B841379BB5 /* XAWeaveHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC15FA557901C9159805F3E8 /* XAWeaveHandler.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F6BF7420622819FDD6C7F3B6 /* XCTestConsoleMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 12A14C3E97DE1C4647773A20 /* XCTestConsoleMessage.h */; };
-		FA47CAA5FF14061E708FF5FA /* XACExtensions.c in Sources */ = {isa = PBXBuildFile; fileRef = B5D45AEEC4488AC0E0E445F7 /* XACExtensions.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FE30C3D5A08034572007E52B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C234B1B3B15B56ABAAFFB1 /* Foundation.framework */; };
+		13FEB9F6DDF9C2A7F4DE5A937E3BFC3B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC978AF41042082F6DC1D91804547A8 /* XCTest.framework */; };
+		76E4D4729FCA6045A19C67CFB34D1270 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FBFDEB9510FBD28573B0C5B541A12C /* Foundation.framework */; };
+		7C54F3E5B95A39A75C3E666D4E12A7D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FBFDEB9510FBD28573B0C5B541A12C /* Foundation.framework */; };
+		9AD613580498FB4EAD79640FD2E603FB /* XCTestConsoleMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5C17DAC7262973FF319E6BAAEE7444 /* XCTestConsoleMessage.m */; };
+		C3D38DD5DF1B90F5997A440454488B22 /* Pods-XLTestLogDevTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5216459982FD9BF6E486FF4E963923 /* Pods-XLTestLogDevTests-dummy.m */; };
+		CB5C936F6F0212DDBF599800A47D7130 /* XCTestConsoleMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 213AAD133090A5126A58A26BF21A0C27 /* XCTestConsoleMessage.h */; };
+		DE8700295332A1A7F05E71EAC34F2AA7 /* XLTestLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 941CCC5B85B0F198C0EEEF9E1A323E60 /* XLTestLog-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		11DE49C2E143C1C02903F9E7 /* PBXContainerItemProxy */ = {
+		F7986176E71815FD0A2858DA98D054BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 909A577A6F5ABD9DAEB39AA3 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EC78D3C1144DA00EBA16A753;
-			remoteInfo = "Pods-XLTestLogDevTests-XAspect";
-		};
-		7286F99B7294E765DAD9F829 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 909A577A6F5ABD9DAEB39AA3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6B261924849F052F8E223464;
-			remoteInfo = "Pods-XLTestLogDevTests-XLTestLog";
-		};
-		E9C12BDD83BA33436928F9EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 909A577A6F5ABD9DAEB39AA3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EC78D3C1144DA00EBA16A753;
-			remoteInfo = "Pods-XLTestLogDevTests-XAspect";
+			remoteGlobalIDString = 8D19C7DFBCA378F7AE1F8ECE0CC64B0B;
+			remoteInfo = XLTestLog;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01034F6B83447C3D986AA8F9 /* XADebugMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XADebugMacros.h; path = XAspect/Macros/XADebugMacros.h; sourceTree = "<group>"; };
-		03C774E1C2D5E51E62931403 /* XACExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XACExtensions.h; path = XAspect/Core/XACExtensions.h; sourceTree = "<group>"; };
-		0544264421EAB64C9C05541F /* Pods-XLTestLogDevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests.release.xcconfig"; sourceTree = "<group>"; };
-		12A14C3E97DE1C4647773A20 /* XCTestConsoleMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XCTestConsoleMessage.h; sourceTree = "<group>"; };
-		194443047AB0F215739103AA /* Pods-XLTestLogDevTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLTestLogDevTests-dummy.m"; sourceTree = "<group>"; };
-		2106A6A86F9D6D13FF07226D /* libPods-XLTestLogDevTests-XLTestLog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLTestLogDevTests-XLTestLog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DBD442C4D35817C175C3A6B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		2F7757D75D2FF851BC6A0611 /* Pods-XLTestLogDevTests-XLTestLog-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests-XLTestLog-Private.xcconfig"; sourceTree = "<group>"; };
-		428070351D6BE52B72F4961C /* libPods-XLTestLogDevTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLTestLogDevTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		45934F41032EF18F00965A95 /* Pods-XLTestLogDevTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLTestLogDevTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		49377EA6692932352A0C523C /* XAFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XAFoundation.h; path = XAspect/Macros/XAFoundation.h; sourceTree = "<group>"; };
-		4D282C6B1D53A62507E14859 /* Pods-XLTestLogDevTests-XLTestLog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLTestLogDevTests-XLTestLog-prefix.pch"; sourceTree = "<group>"; };
-		52D3B739C33B6A57DEE96A55 /* Pods-XLTestLogDevTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLTestLogDevTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		52E08ED0912EE7304867DFB2 /* libPods-XLTestLogDevTests-XAspect.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLTestLogDevTests-XAspect.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		52F66F04B3FC2675341B11B1 /* XAObjcMetaprogramming.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XAObjcMetaprogramming.h; path = XAspect/Macros/XAObjcMetaprogramming.h; sourceTree = "<group>"; };
-		628C2817C2BDFFD1026AAD21 /* XAExtObjcMetamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XAExtObjcMetamacros.h; path = XAspect/Macros/XAExtObjcMetamacros.h; sourceTree = "<group>"; };
-		7956C7AB888DDED3CE7411AC /* Pods-XLTestLogDevTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLTestLogDevTests-environment.h"; sourceTree = "<group>"; };
-		7A09BAACEF7DEFB6249B0AB1 /* XACrystallization.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = XACrystallization.cpp; path = XAspect/Core/XACrystallization.cpp; sourceTree = "<group>"; };
-		81707657EC1FA06400BA874A /* Aspect-XCTestConsoleMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Aspect-XCTestConsoleMessage.m"; sourceTree = "<group>"; };
-		8495FEB49EEC15FAD28BC995 /* Pods-XLTestLogDevTests-XLTestLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLTestLogDevTests-XLTestLog-dummy.m"; sourceTree = "<group>"; };
-		88CC200F83AC5B0A117C38F4 /* XAspect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XAspect.h; path = XAspect/XAspect.h; sourceTree = "<group>"; };
-		9BC4F9CE2607E7F3F11A19E6 /* Pods-XLTestLogDevTests-XAspect.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests-XAspect.xcconfig"; sourceTree = "<group>"; };
-		A10F6530B33774359D1605C4 /* Pods-XLTestLogDevTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B1F1539755239CC6F3C6CE88 /* XCTestConsoleMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XCTestConsoleMessage.m; sourceTree = "<group>"; };
-		B2C234B1B3B15B56ABAAFFB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		B5D45AEEC4488AC0E0E445F7 /* XACExtensions.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = XACExtensions.c; path = XAspect/Core/XACExtensions.c; sourceTree = "<group>"; };
-		C399F31F6A36D2321B661B99 /* Pods-XLTestLogDevTests-XAspect-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLTestLogDevTests-XAspect-dummy.m"; sourceTree = "<group>"; };
-		C9809915821C7AAFD99C0DF6 /* Pods-XLTestLogDevTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XLTestLogDevTests-resources.sh"; sourceTree = "<group>"; };
-		D4345D16C12CC2DE25F7F316 /* Pods-XLTestLogDevTests-XAspect-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XLTestLogDevTests-XAspect-prefix.pch"; sourceTree = "<group>"; };
-		DB8E61B0AB9717F282F22805 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EA1DF3883B79B6C007B06C2D /* Pods-XLTestLogDevTests-XLTestLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests-XLTestLog.xcconfig"; sourceTree = "<group>"; };
-		F31DFB00DED17DBA8FD601CE /* Pods-XLTestLogDevTests-XAspect-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests-XAspect-Private.xcconfig"; sourceTree = "<group>"; };
-		F5FF6B2F91695C102EBED25B /* XAWeaveHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XAWeaveHandler.h; path = XAspect/Core/XAWeaveHandler.h; sourceTree = "<group>"; };
-		FC15FA557901C9159805F3E8 /* XAWeaveHandler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = XAWeaveHandler.cpp; path = XAspect/Core/XAWeaveHandler.cpp; sourceTree = "<group>"; };
-		FF7A6AC67CB852069AFDB65B /* XACrystallization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XACrystallization.h; path = XAspect/Core/XACrystallization.h; sourceTree = "<group>"; };
+		13BF83146A3EC78AF2C36C44674BC619 /* XLTestLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLTestLog.xcconfig; sourceTree = "<group>"; };
+		213AAD133090A5126A58A26BF21A0C27 /* XCTestConsoleMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XCTestConsoleMessage.h; sourceTree = "<group>"; };
+		3B29FDC2B0987CA3AA1588101054A8D1 /* libPods-XLTestLogDevTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLTestLogDevTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C20D91553EA93338A5D2A68330484F0 /* XLTestLog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLTestLog-prefix.pch"; sourceTree = "<group>"; };
+		5A09BE4ABFB6283FF84DB847C39C7C9B /* Pods-XLTestLogDevTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLTestLogDevTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		67BD2580F9905FBC3821B21B146868DC /* Pods-XLTestLogDevTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-XLTestLogDevTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7D76E8C5E72115B3BC0E09D9426B0DCE /* Pods-XLTestLogDevTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F8CCD592BF6DE25710FB8D544DFE89F /* libXLTestLog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXLTestLog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		85DEB5C0D3D3DEEC2BD4D173BD4F3DC2 /* Pods-XLTestLogDevTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-XLTestLogDevTests-resources.sh"; sourceTree = "<group>"; };
+		8FC978AF41042082F6DC1D91804547A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		941CCC5B85B0F198C0EEEF9E1A323E60 /* XLTestLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLTestLog-dummy.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C6B05D6AF55BE1390488E98FD29047CC /* Pods-XLTestLogDevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD5C17DAC7262973FF319E6BAAEE7444 /* XCTestConsoleMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XCTestConsoleMessage.m; sourceTree = "<group>"; };
+		DB5216459982FD9BF6E486FF4E963923 /* Pods-XLTestLogDevTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLTestLogDevTests-dummy.m"; sourceTree = "<group>"; };
+		EF5DA16027530FB3650A2707EF8F42B6 /* XLTestLog-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "XLTestLog-Private.xcconfig"; sourceTree = "<group>"; };
+		F3FBFDEB9510FBD28573B0C5B541A12C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C88E7159B984437BE7F089D /* Frameworks */ = {
+		808E5E56D3B4685422FBD883774963BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				704AF07AC4D2605A869412DF /* Foundation.framework in Frameworks */,
-				32F25D66F00F2A18E2504B3C /* XCTest.framework in Frameworks */,
+				7C54F3E5B95A39A75C3E666D4E12A7D5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B7B396DFA879C14EBD4EA1C /* Frameworks */ = {
+		A8746009B72A9FF9EFB439E7D691C8A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE30C3D5A08034572007E52B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BA154F573CFBAF7713820144 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				47B962FB1E713069A2E5E8B8 /* Foundation.framework in Frameworks */,
+				76E4D4729FCA6045A19C67CFB34D1270 /* Foundation.framework in Frameworks */,
+				13FEB9F6DDF9C2A7F4DE5A937E3BFC3B /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05FF5AE5B85C64C5F6E96E70 /* Pods */ = {
+		26187AA0D6EA59ABE87BB6286033989A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				888AB4E580F5EB2CF84FF0B3 /* XAspect */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		0EA46910E969041C69CACA7A /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				01034F6B83447C3D986AA8F9 /* XADebugMacros.h */,
-				628C2817C2BDFFD1026AAD21 /* XAExtObjcMetamacros.h */,
-				49377EA6692932352A0C523C /* XAFoundation.h */,
-				52F66F04B3FC2675341B11B1 /* XAObjcMetaprogramming.h */,
-			);
-			name = Macros;
-			sourceTree = "<group>";
-		};
-		0EE96ED838F9DA0D4B40DE24 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2FCDB91523B53BACFFFB8C31 /* XLTestLog */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		1B4814418A1E9CFF5994E57B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EA1DF3883B79B6C007B06C2D /* Pods-XLTestLogDevTests-XLTestLog.xcconfig */,
-				2F7757D75D2FF851BC6A0611 /* Pods-XLTestLogDevTests-XLTestLog-Private.xcconfig */,
-				8495FEB49EEC15FAD28BC995 /* Pods-XLTestLogDevTests-XLTestLog-dummy.m */,
-				4D282C6B1D53A62507E14859 /* Pods-XLTestLogDevTests-XLTestLog-prefix.pch */,
+				13BF83146A3EC78AF2C36C44674BC619 /* XLTestLog.xcconfig */,
+				EF5DA16027530FB3650A2707EF8F42B6 /* XLTestLog-Private.xcconfig */,
+				941CCC5B85B0F198C0EEEF9E1A323E60 /* XLTestLog-dummy.m */,
+				3C20D91553EA93338A5D2A68330484F0 /* XLTestLog-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "XLTestLogDev/Pods/Target Support Files/Pods-XLTestLogDevTests-XLTestLog";
+			path = "XLTestLogDev/Pods/Target Support Files/XLTestLog";
 			sourceTree = "<group>";
 		};
-		2FCDB91523B53BACFFFB8C31 /* XLTestLog */ = {
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B4814418A1E9CFF5994E57B /* Support Files */,
-				A8F12EDC88BD834052D5246B /* XLTestLog */,
+				672D1320B537524AB3A5A6B59F3A0AB5 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6094A9A454DCA6E0EC91E4DDF8BDD55E /* XLTestLog */ = {
+			isa = PBXGroup;
+			children = (
+				26187AA0D6EA59ABE87BB6286033989A /* Support Files */,
+				7FB01ED95BC86075CBA3416076B16978 /* XLTestLog */,
 			);
 			name = XLTestLog;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		36954854668557526497BBDF /* Pods-XLTestLogDevTests */ = {
+		672D1320B537524AB3A5A6B59F3A0AB5 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				45934F41032EF18F00965A95 /* Pods-XLTestLogDevTests-acknowledgements.markdown */,
-				52D3B739C33B6A57DEE96A55 /* Pods-XLTestLogDevTests-acknowledgements.plist */,
-				194443047AB0F215739103AA /* Pods-XLTestLogDevTests-dummy.m */,
-				7956C7AB888DDED3CE7411AC /* Pods-XLTestLogDevTests-environment.h */,
-				C9809915821C7AAFD99C0DF6 /* Pods-XLTestLogDevTests-resources.sh */,
-				A10F6530B33774359D1605C4 /* Pods-XLTestLogDevTests.debug.xcconfig */,
-				0544264421EAB64C9C05541F /* Pods-XLTestLogDevTests.release.xcconfig */,
+				F3FBFDEB9510FBD28573B0C5B541A12C /* Foundation.framework */,
+				8FC978AF41042082F6DC1D91804547A8 /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		79716BDD1473AE446F540A05AC4DF132 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6094A9A454DCA6E0EC91E4DDF8BDD55E /* XLTestLog */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				79716BDD1473AE446F540A05AC4DF132 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				F31D833650F8275D7D140880F97F5170 /* Targets Support Files */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		7FB01ED95BC86075CBA3416076B16978 /* XLTestLog */ = {
+			isa = PBXGroup;
+			children = (
+				213AAD133090A5126A58A26BF21A0C27 /* XCTestConsoleMessage.h */,
+				CD5C17DAC7262973FF319E6BAAEE7444 /* XCTestConsoleMessage.m */,
+			);
+			path = XLTestLog;
+			sourceTree = "<group>";
+		};
+		9046797F06B13137F34C6A10E4E86122 /* Pods-XLTestLogDevTests */ = {
+			isa = PBXGroup;
+			children = (
+				67BD2580F9905FBC3821B21B146868DC /* Pods-XLTestLogDevTests-acknowledgements.markdown */,
+				5A09BE4ABFB6283FF84DB847C39C7C9B /* Pods-XLTestLogDevTests-acknowledgements.plist */,
+				DB5216459982FD9BF6E486FF4E963923 /* Pods-XLTestLogDevTests-dummy.m */,
+				85DEB5C0D3D3DEEC2BD4D173BD4F3DC2 /* Pods-XLTestLogDevTests-resources.sh */,
+				7D76E8C5E72115B3BC0E09D9426B0DCE /* Pods-XLTestLogDevTests.debug.xcconfig */,
+				C6B05D6AF55BE1390488E98FD29047CC /* Pods-XLTestLogDevTests.release.xcconfig */,
 			);
 			name = "Pods-XLTestLogDevTests";
 			path = "Target Support Files/Pods-XLTestLogDevTests";
 			sourceTree = "<group>";
 		};
-		377425D00284AF130EC2C5CB /* iOS */ = {
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2C234B1B3B15B56ABAAFFB1 /* Foundation.framework */,
-				2DBD442C4D35817C175C3A6B /* XCTest.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		4681CF9654E9F7417954AC83 = {
-			isa = PBXGroup;
-			children = (
-				DB8E61B0AB9717F282F22805 /* Podfile */,
-				0EE96ED838F9DA0D4B40DE24 /* Development Pods */,
-				A9BEFC744A48A272C1C868E9 /* Frameworks */,
-				05FF5AE5B85C64C5F6E96E70 /* Pods */,
-				76F482D515102A17040B524E /* Products */,
-				4E53B1A96FFB08A14248A244 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		4E53B1A96FFB08A14248A244 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				36954854668557526497BBDF /* Pods-XLTestLogDevTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		76F482D515102A17040B524E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				428070351D6BE52B72F4961C /* libPods-XLTestLogDevTests.a */,
-				52E08ED0912EE7304867DFB2 /* libPods-XLTestLogDevTests-XAspect.a */,
-				2106A6A86F9D6D13FF07226D /* libPods-XLTestLogDevTests-XLTestLog.a */,
+				3B29FDC2B0987CA3AA1588101054A8D1 /* libPods-XLTestLogDevTests.a */,
+				7F8CCD592BF6DE25710FB8D544DFE89F /* libXLTestLog.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		888AB4E580F5EB2CF84FF0B3 /* XAspect */ = {
+		F31D833650F8275D7D140880F97F5170 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				88CC200F83AC5B0A117C38F4 /* XAspect.h */,
-				CB9D0F42F978F70563262C1A /* Core */,
-				0EA46910E969041C69CACA7A /* Macros */,
-				AFCF5F2EF25AD736FD2A010A /* Support Files */,
+				9046797F06B13137F34C6A10E4E86122 /* Pods-XLTestLogDevTests */,
 			);
-			path = XAspect;
-			sourceTree = "<group>";
-		};
-		A8F12EDC88BD834052D5246B /* XLTestLog */ = {
-			isa = PBXGroup;
-			children = (
-				81707657EC1FA06400BA874A /* Aspect-XCTestConsoleMessage.m */,
-				12A14C3E97DE1C4647773A20 /* XCTestConsoleMessage.h */,
-				B1F1539755239CC6F3C6CE88 /* XCTestConsoleMessage.m */,
-			);
-			path = XLTestLog;
-			sourceTree = "<group>";
-		};
-		A9BEFC744A48A272C1C868E9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				377425D00284AF130EC2C5CB /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AFCF5F2EF25AD736FD2A010A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9BC4F9CE2607E7F3F11A19E6 /* Pods-XLTestLogDevTests-XAspect.xcconfig */,
-				F31DFB00DED17DBA8FD601CE /* Pods-XLTestLogDevTests-XAspect-Private.xcconfig */,
-				C399F31F6A36D2321B661B99 /* Pods-XLTestLogDevTests-XAspect-dummy.m */,
-				D4345D16C12CC2DE25F7F316 /* Pods-XLTestLogDevTests-XAspect-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-XLTestLogDevTests-XAspect";
-			sourceTree = "<group>";
-		};
-		CB9D0F42F978F70563262C1A /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				B5D45AEEC4488AC0E0E445F7 /* XACExtensions.c */,
-				03C774E1C2D5E51E62931403 /* XACExtensions.h */,
-				7A09BAACEF7DEFB6249B0AB1 /* XACrystallization.cpp */,
-				FF7A6AC67CB852069AFDB65B /* XACrystallization.h */,
-				FC15FA557901C9159805F3E8 /* XAWeaveHandler.cpp */,
-				F5FF6B2F91695C102EBED25B /* XAWeaveHandler.h */,
-			);
-			name = Core;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		CF5308E590DC6F8ECD98DEFD /* Headers */ = {
+		447BF471A92226B983F9DD46F14E6159 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0BA209FD65F0671413376D3 /* XACExtensions.h in Headers */,
-				A2CC9657416E6DD3FDE84458 /* XACrystallization.h in Headers */,
-				72F4AFAA761CCEB3A2BBCF1D /* XADebugMacros.h in Headers */,
-				D495B73FD88D6D6F7A498CE6 /* XAExtObjcMetamacros.h in Headers */,
-				7C71D9B53573E89109255F1A /* XAFoundation.h in Headers */,
-				027FA0D426FAA745E3328870 /* XAObjcMetaprogramming.h in Headers */,
-				3CA5CCF9176790E78D49914B /* XAWeaveHandler.h in Headers */,
-				6D87E01151C531C30EB2F611 /* XAspect.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F825D3C8032A1C32A3C81636 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F6BF7420622819FDD6C7F3B6 /* XCTestConsoleMessage.h in Headers */,
+				CB5C936F6F0212DDBF599800A47D7130 /* XCTestConsoleMessage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6B261924849F052F8E223464 /* Pods-XLTestLogDevTests-XLTestLog */ = {
+		12D1F6FB4D2AADCDBAF47B753281DAE6 /* Pods-XLTestLogDevTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4932944B38AF08F48641D5D /* Build configuration list for PBXNativeTarget "Pods-XLTestLogDevTests-XLTestLog" */;
+			buildConfigurationList = C8BD2A7761C9A4680F83A314F10E1041 /* Build configuration list for PBXNativeTarget "Pods-XLTestLogDevTests" */;
 			buildPhases = (
-				B96AA90B444A16E8E759628A /* Sources */,
-				1C88E7159B984437BE7F089D /* Frameworks */,
-				F825D3C8032A1C32A3C81636 /* Headers */,
+				737106FE58E4F3B228DE7E27E06A3A2E /* Sources */,
+				808E5E56D3B4685422FBD883774963BF /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CD044FFABE4E1E0B23456BD1 /* PBXTargetDependency */,
-			);
-			name = "Pods-XLTestLogDevTests-XLTestLog";
-			productName = "Pods-XLTestLogDevTests-XLTestLog";
-			productReference = 2106A6A86F9D6D13FF07226D /* libPods-XLTestLogDevTests-XLTestLog.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A4F7B76FE2321D292730D250 /* Pods-XLTestLogDevTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 79C1ADCA2D2D9CD6305B0786 /* Build configuration list for PBXNativeTarget "Pods-XLTestLogDevTests" */;
-			buildPhases = (
-				F7BEBCDE7D6A4BA176ABE524 /* Sources */,
-				BA154F573CFBAF7713820144 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA8C47B06F1DA9440274B43C /* PBXTargetDependency */,
-				DD5FC76AD61A2DA8E94677F4 /* PBXTargetDependency */,
+				A992ED6697D72B5ED4B2BDD417C063BB /* PBXTargetDependency */,
 			);
 			name = "Pods-XLTestLogDevTests";
 			productName = "Pods-XLTestLogDevTests";
-			productReference = 428070351D6BE52B72F4961C /* libPods-XLTestLogDevTests.a */;
+			productReference = 3B29FDC2B0987CA3AA1588101054A8D1 /* libPods-XLTestLogDevTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		EC78D3C1144DA00EBA16A753 /* Pods-XLTestLogDevTests-XAspect */ = {
+		8D19C7DFBCA378F7AE1F8ECE0CC64B0B /* XLTestLog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 738172D4C69F161A00D7DBB2 /* Build configuration list for PBXNativeTarget "Pods-XLTestLogDevTests-XAspect" */;
+			buildConfigurationList = 9A0C98E94CF73ADFDE5F26361E602B99 /* Build configuration list for PBXNativeTarget "XLTestLog" */;
 			buildPhases = (
-				867A3B2BDF3B251CC2ED2114 /* Sources */,
-				8B7B396DFA879C14EBD4EA1C /* Frameworks */,
-				CF5308E590DC6F8ECD98DEFD /* Headers */,
+				E006DB42E7FD5B4A844F052A46F1109B /* Sources */,
+				A8746009B72A9FF9EFB439E7D691C8A7 /* Frameworks */,
+				447BF471A92226B983F9DD46F14E6159 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-XLTestLogDevTests-XAspect";
-			productName = "Pods-XLTestLogDevTests-XAspect";
-			productReference = 52E08ED0912EE7304867DFB2 /* libPods-XLTestLogDevTests-XAspect.a */;
+			name = XLTestLog;
+			productName = XLTestLog;
+			productReference = 7F8CCD592BF6DE25710FB8D544DFE89F /* libXLTestLog.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		909A577A6F5ABD9DAEB39AA3 /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = 311B227A9D9FB712E294F42B /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4681CF9654E9F7417954AC83;
-			productRefGroup = 76F482D515102A17040B524E /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A4F7B76FE2321D292730D250 /* Pods-XLTestLogDevTests */,
-				EC78D3C1144DA00EBA16A753 /* Pods-XLTestLogDevTests-XAspect */,
-				6B261924849F052F8E223464 /* Pods-XLTestLogDevTests-XLTestLog */,
+				12D1F6FB4D2AADCDBAF47B753281DAE6 /* Pods-XLTestLogDevTests */,
+				8D19C7DFBCA378F7AE1F8ECE0CC64B0B /* XLTestLog */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		867A3B2BDF3B251CC2ED2114 /* Sources */ = {
+		737106FE58E4F3B228DE7E27E06A3A2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598214E07C05A47F1DDBF144 /* Pods-XLTestLogDevTests-XAspect-dummy.m in Sources */,
-				FA47CAA5FF14061E708FF5FA /* XACExtensions.c in Sources */,
-				0DCA6A7BE7DA2E7542100449 /* XACrystallization.cpp in Sources */,
-				F3BED5974E6E57B841379BB5 /* XAWeaveHandler.cpp in Sources */,
+				C3D38DD5DF1B90F5997A440454488B22 /* Pods-XLTestLogDevTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B96AA90B444A16E8E759628A /* Sources */ = {
+		E006DB42E7FD5B4A844F052A46F1109B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D92B03A63773753C7908FB /* Aspect-XCTestConsoleMessage.m in Sources */,
-				E38EA4A5721825A3691FAA57 /* Pods-XLTestLogDevTests-XLTestLog-dummy.m in Sources */,
-				E4E07BAFD080DC5475C1C8BB /* XCTestConsoleMessage.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7BEBCDE7D6A4BA176ABE524 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3BF9854EC4D9F41329A1EBA1 /* Pods-XLTestLogDevTests-dummy.m in Sources */,
+				9AD613580498FB4EAD79640FD2E603FB /* XCTestConsoleMessage.m in Sources */,
+				DE8700295332A1A7F05E71EAC34F2AA7 /* XLTestLog-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CD044FFABE4E1E0B23456BD1 /* PBXTargetDependency */ = {
+		A992ED6697D72B5ED4B2BDD417C063BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-XLTestLogDevTests-XAspect";
-			target = EC78D3C1144DA00EBA16A753 /* Pods-XLTestLogDevTests-XAspect */;
-			targetProxy = 11DE49C2E143C1C02903F9E7 /* PBXContainerItemProxy */;
-		};
-		DD5FC76AD61A2DA8E94677F4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-XLTestLogDevTests-XLTestLog";
-			target = 6B261924849F052F8E223464 /* Pods-XLTestLogDevTests-XLTestLog */;
-			targetProxy = 7286F99B7294E765DAD9F829 /* PBXContainerItemProxy */;
-		};
-		EA8C47B06F1DA9440274B43C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-XLTestLogDevTests-XAspect";
-			target = EC78D3C1144DA00EBA16A753 /* Pods-XLTestLogDevTests-XAspect */;
-			targetProxy = E9C12BDD83BA33436928F9EE /* PBXContainerItemProxy */;
+			name = XLTestLog;
+			target = 8D19C7DFBCA378F7AE1F8ECE0CC64B0B /* XLTestLog */;
+			targetProxy = F7986176E71815FD0A2858DA98D054BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0E36591D0FCEDDD52B0906FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F7757D75D2FF851BC6A0611 /* Pods-XLTestLogDevTests-XLTestLog-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-XLTestLogDevTests-XLTestLog/Pods-XLTestLogDevTests-XLTestLog-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		1417E1C2ACD0A4BBA0CA850D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		291621807CD1021A5DAFE77C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F31DFB00DED17DBA8FD601CE /* Pods-XLTestLogDevTests-XAspect-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-XLTestLogDevTests-XAspect/Pods-XLTestLogDevTests-XAspect-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		375DC531BE2DA0B4C74FF92F /* Debug */ = {
+		6569F07DC21AD8B72752685013E3D9D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -539,19 +305,69 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		8EB59D78E79F699F59F13F0F /* Release */ = {
+		7880162237FB9FE3DF6687169E5E0402 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0544264421EAB64C9C05541F /* Pods-XLTestLogDevTests.release.xcconfig */;
+			baseConfigurationReference = EF5DA16027530FB3650A2707EF8F42B6 /* XLTestLog-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				GCC_PREFIX_HEADER = "Target Support Files/XLTestLog/XLTestLog-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A14E2444F162A20E3776820E0ADFFB52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B01745948FE55BE3C1CE67A60563FEF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6B05D6AF55BE1390488E98FD29047CC /* Pods-XLTestLogDevTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -562,44 +378,12 @@
 			};
 			name = Release;
 		};
-		91483D414926456BE9676AE1 /* Release */ = {
+		E4D5B1FE3F91F69B18148AC93F99AEBB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F7757D75D2FF851BC6A0611 /* Pods-XLTestLogDevTests-XLTestLog-Private.xcconfig */;
+			baseConfigurationReference = 7D76E8C5E72115B3BC0E09D9426B0DCE /* Pods-XLTestLogDevTests.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-XLTestLogDevTests-XLTestLog/Pods-XLTestLogDevTests-XLTestLog-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		D2E22D70D1FD7556D712F07B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F31DFB00DED17DBA8FD601CE /* Pods-XLTestLogDevTests-XAspect-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-XLTestLogDevTests-XAspect/Pods-XLTestLogDevTests-XAspect-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		EFFAD413F9C24B2D179CB951 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A10F6530B33774359D1605C4 /* Pods-XLTestLogDevTests.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -610,46 +394,53 @@
 			};
 			name = Debug;
 		};
+		E6D6C5135AC4D32B9E659357EE2626A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF5DA16027530FB3650A2707EF8F42B6 /* XLTestLog-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/XLTestLog/XLTestLog-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		311B227A9D9FB712E294F42B /* Build configuration list for PBXProject "Pods" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				375DC531BE2DA0B4C74FF92F /* Debug */,
-				1417E1C2ACD0A4BBA0CA850D /* Release */,
+				6569F07DC21AD8B72752685013E3D9D8 /* Debug */,
+				A14E2444F162A20E3776820E0ADFFB52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		738172D4C69F161A00D7DBB2 /* Build configuration list for PBXNativeTarget "Pods-XLTestLogDevTests-XAspect" */ = {
+		9A0C98E94CF73ADFDE5F26361E602B99 /* Build configuration list for PBXNativeTarget "XLTestLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				291621807CD1021A5DAFE77C /* Debug */,
-				D2E22D70D1FD7556D712F07B /* Release */,
+				E6D6C5135AC4D32B9E659357EE2626A1 /* Debug */,
+				7880162237FB9FE3DF6687169E5E0402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79C1ADCA2D2D9CD6305B0786 /* Build configuration list for PBXNativeTarget "Pods-XLTestLogDevTests" */ = {
+		C8BD2A7761C9A4680F83A314F10E1041 /* Build configuration list for PBXNativeTarget "Pods-XLTestLogDevTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EFFAD413F9C24B2D179CB951 /* Debug */,
-				8EB59D78E79F699F59F13F0F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4932944B38AF08F48641D5D /* Build configuration list for PBXNativeTarget "Pods-XLTestLogDevTests-XLTestLog" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E36591D0FCEDDD52B0906FB /* Debug */,
-				91483D414926456BE9676AE1 /* Release */,
+				E4D5B1FE3F91F69B18148AC93F99AEBB /* Debug */,
+				B01745948FE55BE3C1CE67A60563FEF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 909A577A6F5ABD9DAEB39AA3 /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }
