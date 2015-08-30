@@ -46,26 +46,26 @@
 #define XCOLORS_RESET     XCOLORS_ESCAPE XCOLORS_END // Clear any foreground or background color
 
 // -----------------------------------------------------------------------------
-// Keyword coloring (R,G,B)
-#define XCTEST_BG            XCOLORS_SET_BG(XCOLORS_NORMAL_BLACK)
-#define XCTEST_SPECIAL_BG    XCOLORS_SET_BG(XCOLORS_BRIGHT_BLACK)
+// Coloring keywords
+#define XLSTYLE_BG            XCOLORS_SET_BG(XCOLORS_NORMAL_BLACK)
+#define XLSTYLE_SPECIAL_BG    XCOLORS_SET_BG(XCOLORS_BRIGHT_BLACK)
 
-#define XCTEST_SUITE_COLOR   XCOLORS_SET_FG(XCOLORS_BRIGHT_BLUE)
-#define XCTEST_SUBJECT_COLOR XCOLORS_SET_FG(XCOLORS_NORMAL_BLUE)
+#define XLSTYLE_SUITE         XCOLORS_SET_FG(XCOLORS_BRIGHT_BLUE)
+#define XLSTYLE_SUBJECT       XCOLORS_SET_FG(XCOLORS_NORMAL_BLUE)
 
-#define XCTEST_CASE_COLOR    XCOLORS_SET_FG(XCOLORS_BRIGHT_BLACK)
-#define XCTEST_TIME_COLOR    XCOLORS_SET_FG(XCOLORS_NORMAL_WHITE)
+#define XLSTYLE_CASE          XCOLORS_SET_FG(XCOLORS_BRIGHT_BLACK)
+#define XLSTYLE_TIME          XCOLORS_SET_FG(XCOLORS_NORMAL_WHITE)
 
-#define XCTEST_MEASURE_COLOR XCOLORS_SET_FG(XCOLORS_NORMAL_YELLOW)
-#define XCTEST_WARNING_COLOR XCOLORS_SET_FG(XCOLORS_BRIGHT_YELLOW)
+#define XLSTYLE_MEASURE       XCOLORS_SET_FG(XCOLORS_NORMAL_YELLOW)
+#define XLSTYLE_WARNING       XCOLORS_SET_FG(XCOLORS_BRIGHT_YELLOW)
 
-#define XCTEST_PASS          XCOLORS_SET_FG(XCOLORS_BRIGHT_GREEN)
-#define XCTEST_FAIL          XCOLORS_SET_FG(XCOLORS_BRIGHT_RED)
-#define XCTEST_PASS_STATS    XCOLORS_SET_FG(XCOLORS_BRIGHT_GREEN)
-#define XCTEST_FAIL_STATS    XCOLORS_SET_FG(XCOLORS_BRIGHT_RED)
+#define XLSTYLE_PASS          XCOLORS_SET_FG(XCOLORS_BRIGHT_GREEN)
+#define XLSTYLE_FAIL          XCOLORS_SET_FG(XCOLORS_BRIGHT_RED)
+#define XLSTYLE_PASS_STATS    XCOLORS_SET_FG(XCOLORS_BRIGHT_GREEN)
+#define XLSTYLE_FAIL_STATS    XCOLORS_SET_FG(XCOLORS_BRIGHT_RED)
 
 // -----------------------------------------------------------------------------
-// Defined colors
+// Defined colors (R,G,B)
 #define XCOLORS_NORMAL_BLACK   @"0,0,0"
 #define XCOLORS_BRIGHT_BLACK   @"102,102,102"
 #define XCOLORS_NORMAL_RED     @"155,15,31"
@@ -188,11 +188,11 @@
 - (NSString *)testSuiteStartedLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   static NSString *newFormat =
-  (XCTEST_BG            @"👤 "
-   XCTEST_SUITE_COLOR   @"Test Suite "
-   XCTEST_SUBJECT_COLOR @"'%@'"   // test suite target
-   XCTEST_SUITE_COLOR   @" started at "
-   XCTEST_TIME_COLOR    @"%@\n"   // timestamp
+  (XLSTYLE_BG      @"👤 "
+   XLSTYLE_SUITE   @"Test Suite "
+   XLSTYLE_SUBJECT @"'%@'"   // test suite target
+   XLSTYLE_SUITE   @" started at "
+   XLSTYLE_TIME    @"%@\n"   // timestamp
    XCOLORS_RESET);
   
   return [[NSString alloc] initWithFormat:newFormat arguments:arguments];
@@ -204,59 +204,60 @@
   va_list ap;
   va_copy(ap, arguments);
   __attribute__((unused)) id testSuiteTarget = va_arg(ap, id);
-  const char *results = va_arg(ap, char*);
+  const char *results                        = va_arg(ap, char*);
   va_end(ap);
   
   NSString *coloredFormat;
   if (strcasecmp(results, "passed") == 0)
   {
     coloredFormat =
-    (XCTEST_BG            @"😀 "
-     XCTEST_SUITE_COLOR   @"Test Suite "
-     XCTEST_SUBJECT_COLOR @"'%@'"   // test suite target
-     XCTEST_PASS_STATS    @" %s "   // `passed`
-     XCTEST_SUITE_COLOR   @"at "
-     XCTEST_TIME_COLOR    @"%@\n"   // timestamp
-     XCTEST_SUITE_COLOR   @"     Executed "
-     XCTEST_SUBJECT_COLOR @"%lu test%s"  // total test counts
-     XCTEST_SUITE_COLOR   @", with "
-     XCTEST_PASS_STATS    @"%lu failure%s (%lu unexpected) "
-     XCTEST_SUITE_COLOR   @"in "
-     XCTEST_TIME_COLOR    @"%.3f (%.3f) seconds\n"
+    (XLSTYLE_BG         @"😀 "
+     XLSTYLE_SUITE      @"Test Suite "
+     XLSTYLE_SUBJECT    @"'%@'"   // test suite target
+     XLSTYLE_PASS_STATS @" %s "   // `passed`
+     XLSTYLE_SUITE      @"at "
+     XLSTYLE_TIME       @"%@\n"   // timestamp
+     XLSTYLE_SUITE      @"     Executed "
+     XLSTYLE_SUBJECT    @"%lu test%s"  // total test counts
+     XLSTYLE_SUITE      @", with "
+     XLSTYLE_PASS_STATS @"%lu failure%s (%lu unexpected) "
+     XLSTYLE_SUITE      @"in "
+     XLSTYLE_TIME       @"%.3f (%.3f) seconds\n"
      XCOLORS_RESET);
   }
   else if (strcasecmp(results, "failed") == 0)
   {
     coloredFormat =
-    (XCTEST_BG            @"😱 "
-     XCTEST_SUITE_COLOR   @"Test Suite "
-     XCTEST_SUBJECT_COLOR @"'%@'"   // test suite target
-     XCTEST_FAIL_STATS    @" %s "   // `failed`
-     XCTEST_SUITE_COLOR   @"at "
-     XCTEST_TIME_COLOR    @"%@\n"   // timestamp
-     XCTEST_SUITE_COLOR   @"     Executed "
-     XCTEST_SUBJECT_COLOR @"%lu test%s"  // total test counts
-     XCTEST_SUITE_COLOR   @", with "
-     XCTEST_FAIL_STATS    @"%lu failure%s (%lu unexpected) "
-     XCTEST_SUITE_COLOR   @"in "
-     XCTEST_TIME_COLOR    @"%.3f (%.3f) seconds\n"
+    (XLSTYLE_BG         @"😱 "
+     XLSTYLE_SUITE      @"Test Suite "
+     XLSTYLE_SUBJECT    @"'%@'"   // test suite target
+     XLSTYLE_FAIL_STATS @" %s "   // `failed`
+     XLSTYLE_SUITE      @"at "
+     XLSTYLE_TIME       @"%@\n"   // timestamp
+     XLSTYLE_SUITE      @"     Executed "
+     XLSTYLE_SUBJECT    @"%lu test%s"  // total test counts
+     XLSTYLE_SUITE      @", with "
+     XLSTYLE_FAIL_STATS @"%lu failure%s (%lu unexpected) "
+     XLSTYLE_SUITE      @"in "
+     XLSTYLE_TIME       @"%.3f (%.3f) seconds\n"
      XCOLORS_RESET);
   }
   else
   {
+    // unknown state format
     coloredFormat =
-    (XCTEST_BG            @"❓ "
-     XCTEST_SUITE_COLOR   @"Test Suite "
-     XCTEST_SUBJECT_COLOR @"'%@'"   // test suite target
-     XCTEST_WARNING_COLOR @" %s "   // unknown value
-     XCTEST_SUITE_COLOR   @"at "
-     XCTEST_TIME_COLOR    @"%@\n"   // timestamp
-     XCTEST_SUITE_COLOR   @"     Executed "
-     XCTEST_SUBJECT_COLOR @"%lu test%s"  // total test counts
-     XCTEST_SUITE_COLOR   @", with "
-     XCTEST_WARNING_COLOR @"%lu failure%s (%lu unexpected) "
-     XCTEST_SUITE_COLOR   @"in "
-     XCTEST_TIME_COLOR    @"%.3f (%.3f) seconds\n"
+    (XLSTYLE_BG      @"❓ "
+     XLSTYLE_SUITE   @"Test Suite "
+     XLSTYLE_SUBJECT @"'%@'"   // test suite target
+     XLSTYLE_WARNING @" %s "   // unknown value
+     XLSTYLE_SUITE   @"at "
+     XLSTYLE_TIME    @"%@\n"   // timestamp
+     XLSTYLE_SUITE   @"     Executed "
+     XLSTYLE_SUBJECT @"%lu test%s"  // total test counts
+     XLSTYLE_SUITE   @", with "
+     XLSTYLE_WARNING @"%lu failure%s (%lu unexpected) "
+     XLSTYLE_SUITE   @"in "
+     XLSTYLE_TIME    @"%.3f (%.3f) seconds\n"
      XCOLORS_RESET);
   }
   
@@ -274,9 +275,9 @@
   NSNumber *testCaseNumber = [self testCaseNumberForIdentifier:testSuiteTarget];
 
   static NSString *coloredFormat =
-  (XCTEST_BG          @"  🚀 "
-   XCTEST_SUITE_COLOR @"Test Case-%@ launched\n"
-   XCTEST_CASE_COLOR  @"      '%@'\n"
+  (XLSTYLE_BG    @"  🚀 "
+   XLSTYLE_SUITE @"Test Case-%@ launched\n"
+   XLSTYLE_CASE  @"      '%@'\n"
    XCOLORS_RESET);
   
   return [[NSString alloc] initWithFormat:coloredFormat, testCaseNumber, testSuiteTarget];
@@ -286,8 +287,8 @@
 {
   va_list ap;
   va_copy(ap, arguments);
-  id testCaseTarget = va_arg(ap, id);
-  const char *results = va_arg(ap, char*);
+  id testCaseTarget           = va_arg(ap, id);
+  const char *results         = va_arg(ap, char *);
   NSTimeInterval timeInterval = va_arg(ap, NSTimeInterval);
   va_end(ap);
   
@@ -297,28 +298,29 @@
   if (strcasecmp(results, "passed") == 0)
   {
     coloredFormat =
-    (XCTEST_BG          @"    ✅ "
-     XCTEST_SUITE_COLOR @"Test Case-%@"
-     XCTEST_PASS        @" %s "
-     XCTEST_TIME_COLOR  @"(%.3f seconds)\n"
+    (XLSTYLE_BG    @"    ✅ "
+     XLSTYLE_SUITE @"Test Case-%@"
+     XLSTYLE_PASS  @" %s "
+     XLSTYLE_TIME  @"(%.3f seconds)\n"
      XCOLORS_RESET);
   }
   else if (strcasecmp(results, "failed") == 0)
   {
     coloredFormat =
-    (XCTEST_BG          @"    💥 "
-     XCTEST_SUITE_COLOR @"Test Case-%@"
-     XCTEST_FAIL        @" %s "
-     XCTEST_TIME_COLOR  @"(%.3f seconds)\n"
+    (XLSTYLE_BG    @"    💥 "
+     XLSTYLE_SUITE @"Test Case-%@"
+     XLSTYLE_FAIL  @" %s "
+     XLSTYLE_TIME  @"(%.3f seconds)\n"
      XCOLORS_RESET);
   }
   else
   {
+    // unknown format
     coloredFormat =
-    (XCTEST_BG            @"    ❓ "
-     XCTEST_SUITE_COLOR   @"Test Case-%@"
-     XCTEST_WARNING_COLOR @" %s "
-     XCTEST_TIME_COLOR    @"(%.3f seconds)\n"
+    (XLSTYLE_BG      @"    ❓ "
+     XLSTYLE_SUITE   @"Test Case-%@"
+     XLSTYLE_WARNING @" %s "
+     XLSTYLE_TIME    @"(%.3f seconds)\n"
      XCOLORS_RESET);
   }
   
@@ -329,19 +331,19 @@
 {
   va_list ap;
   va_copy(ap, arguments);
-  NSString *file = va_arg(ap, NSString *);
-  unsigned long line = va_arg(ap, unsigned long);
+  NSString *file           = va_arg(ap, NSString *);
+  unsigned long line       = va_arg(ap, unsigned long);
   NSString *testCaseTarget = va_arg(ap, NSString *);
-  NSString *reason = va_arg(ap, NSString *);
+  NSString *reason         = va_arg(ap, NSString *);
   va_end(ap);
   
   NSNumber *testCaseNumber = [self testCaseNumberForIdentifier:testCaseTarget];
   
   static NSString *coloredFormat =
-  (XCTEST_SPECIAL_BG    @"    🐞 "
-   XCTEST_WARNING_COLOR @"Test Case-%@ Failure Report\n"
-   XCTEST_WARNING_COLOR @"     ⚠️ %@\n"
-   XCTEST_WARNING_COLOR @"     ⚠️ %@:%lu\n"
+  (XLSTYLE_SPECIAL_BG @"    🐞 "
+   XLSTYLE_WARNING    @"Test Case-%@ Failure Report\n"
+   XLSTYLE_WARNING    @"     ⚠️ %@\n"
+   XLSTYLE_WARNING    @"     ⚠️ %@:%lu\n"
    XCOLORS_RESET);
   
   return [[NSString alloc] initWithFormat:coloredFormat, testCaseNumber, reason, file, line];
@@ -377,7 +379,8 @@
   va_copy(ap, arguments);
   __block NSString *results = va_arg(ap, NSString *);
   va_end(ap);
-    
+  
+  // Extract the measurement data from `arguments` into `infoInArguments`.
   __block NSMutableArray *infoInArguments = [NSMutableArray arrayWithCapacity:[constantKeywordsInMeasurementLog count]];
   
   [constantKeywordsInMeasurementLog enumerateObjectsUsingBlock:^(NSString *keyword, NSUInteger idx, BOOL *stop) {
@@ -421,12 +424,12 @@
   double standardDeviation = preciseAverageTime * [relativeStandardDeviation doubleValue] * 0.01;
   
   NSString *newFormat =
-  (XCTEST_BG             @"    🕑 "
-   XCTEST_MEASURE_COLOR  @"Test Case-%@ Performance Measurement\n"
-   XCTEST_MEASURE_COLOR  @"       Results: %.6f ±%.6f (±%@)\n"
-   XCTEST_CASE_COLOR     @"       Samples: %@, %@, %@, %@, %@,\n"
-   XCTEST_CASE_COLOR     @"                %@, %@, %@, %@, %@\n"
-   XCTEST_CASE_COLOR     @"       %@\n"
+  (XLSTYLE_BG       @"    🕑 "
+   XLSTYLE_MEASURE  @"Test Case-%@ Performance Measurement\n"
+   XLSTYLE_MEASURE  @"       Results: %.6f ±%.6f (±%@)\n"
+   XLSTYLE_CASE     @"       Samples: %@, %@, %@, %@, %@,\n"
+   XLSTYLE_CASE     @"                %@, %@, %@, %@, %@\n"
+   XLSTYLE_CASE     @"       %@\n"
    XCOLORS_RESET);
   
   return [NSString stringWithFormat:newFormat, testCaseNumber, preciseAverageTime, standardDeviation, relativeStandardDeviation, sample1, sample2, sample3, sample4, sample5, sample6, sample7, sample8, sample9, sample10, testLocation];
@@ -443,10 +446,12 @@
 
 - (BOOL)isMeasurementLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
+  // The format for measurement results is `@"%@"`.
   if (![format isEqualToString:@"%@"]) {
     return NO;
   }
   
+  // So we check whether the arguments contain keywords for the measure results.
   va_list ap;
   va_copy(ap, arguments);
   NSString *results = va_arg(ap, NSString *);
