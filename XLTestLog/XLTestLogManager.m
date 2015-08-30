@@ -187,7 +187,7 @@
 
 - (NSString *)testSuiteStartedLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
-  static NSString *newFormat =
+  NSString *newFormat =
   (XLSTYLE_BG      @"👤 "
    XLSTYLE_SUITE   @"Test Suite "
    XLSTYLE_SUBJECT @"'%@'"   // test suite target
@@ -274,7 +274,7 @@
   
   NSNumber *testCaseNumber = [self testCaseNumberForIdentifier:testSuiteTarget];
 
-  static NSString *coloredFormat =
+  NSString *coloredFormat =
   (XLSTYLE_BG    @"  🚀 "
    XLSTYLE_SUITE @"Test Case-%@ launched\n"
    XLSTYLE_CASE  @"      '%@'\n"
@@ -339,7 +339,7 @@
   
   NSNumber *testCaseNumber = [self testCaseNumberForIdentifier:testCaseTarget];
   
-  static NSString *coloredFormat =
+  NSString *coloredFormat =
   (XLSTYLE_SPECIAL_BG @"    🐞 "
    XLSTYLE_WARNING    @"Test Case-%@ Failure Report\n"
    XLSTYLE_WARNING    @"     ⚠️ %@\n"
