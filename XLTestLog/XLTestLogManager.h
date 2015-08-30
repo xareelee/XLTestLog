@@ -1,5 +1,5 @@
 // <XLTestLog>
-// XCTestConsoleMessage.h
+// XLTestLogManager.h
 //
 // Copyright (c) 2015 Xaree Lee (Kang-Yu Lee)
 // Released under the MIT license (see below)
@@ -25,10 +25,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XCTestConsoleMessage : NSObject
+@interface XLTestLogManager : NSObject
 
-// Analyze the format to return another console log message for `-[XCTestLog
-// testLogWithFormat:arguments:]`.
-+ (NSString *)testLogWithFormat:(NSString *)format arguments:(va_list)arguments;
+/// Singleton
++ (instancetype)sharedManager;
 
 @end

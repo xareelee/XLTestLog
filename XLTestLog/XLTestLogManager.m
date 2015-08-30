@@ -1,5 +1,5 @@
 // <XLTestLog>
-// XCTestConsoleMessage.m
+// XLTestLogManager.m
 //
 // Copyright (c) 2015 Xaree Lee (Kang-Yu Lee)
 // Released under the MIT license (see below)
@@ -23,7 +23,7 @@
 // THE SOFTWARE.
 
 
-#import "XCTestConsoleMessage.h"
+#import "XLTestLogManager.h"
 
 #import <XCTest/XCTestLog.h>
 #import <objc/runtime.h>
@@ -85,7 +85,11 @@
 
 
 // =============================================================================
-@implementation XCTestConsoleMessage
+@interface XLTestLogManager()
+
+@end
+
+@implementation XLTestLogManager
 
 + (void)load
 {
@@ -93,39 +97,50 @@
 #pragma clang diagnostic ignored "-Wdeprecated"
   Method testLogWithFormat = class_getInstanceMethod([XCTestLog class], @selector(testLogWithFormat:arguments:));
   method_setImplementation(testLogWithFormat, imp_implementationWithBlock(^(XCTestLog *testLog, NSString *format, va_list arguments) {
-    NSString *message = [XCTestConsoleMessage testLogWithFormat:format arguments:arguments];
+    NSString *message = [[XLTestLogManager sharedManager] testLogWithFormat:format arguments:arguments];
     [testLog.logFileHandle writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
   }));
 #pragma clang diagnostic pop
 }
 
-// Analyze the format and the arguments to return a new format for console log.
-+ (NSString *)testLogWithFormat:(NSString *)format arguments:(va_list)arguments
++ (instancetype)sharedManager
+{
+  static XLTestLogManager *sharedManager;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    sharedManager = [XLTestLogManager new];
+  });
+  return sharedManager;
+}
+
+// Analyze the format and the arguments to return a new format for `-[XCTestLog
+// testLogWithFormat:arguments:]`.
+- (NSString *)testLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   if ([format isEqualToString:@"Test Suite '%@' started at %@\n"])
   {
     // Test suite started
-    return [XCTestConsoleMessage testSuiteStartedLogWithFormat:format arguments:arguments];
+    return [self testSuiteStartedLogWithFormat:format arguments:arguments];
   }
   else if ([format isEqualToString:@"Test Suite '%@' %s at %@.\n\t Executed %lu test%s, with %lu failure%s (%lu unexpected) in %.3f (%.3f) seconds\n"])
   {
     // Test suite ended
-    return [XCTestConsoleMessage testSuiteEndedLogWithFormat:format arguments:arguments];
+    return [self testSuiteEndedLogWithFormat:format arguments:arguments];
   }
   else if ([format isEqualToString:@"Test Case '%@' started.\n"])
   {
     // Test case started
-    return [XCTestConsoleMessage testCaseStartedLogWithFormat:format arguments:arguments];
+    return [self testCaseStartedLogWithFormat:format arguments:arguments];
   }
   else if ([format isEqualToString:@"Test Case '%@' %s (%.3f seconds).\n"])
   {
     // Test case ended
-    return [XCTestConsoleMessage testCaseEndedLogWithFormat:format arguments:arguments];
+    return [self testCaseEndedLogWithFormat:format arguments:arguments];
   }
   else if ([format isEqualToString:@"%@:%lu: error: %@ : %@\n"])
   {
     // Find error
-    return [XCTestConsoleMessage testErrorLogWithFormat:format arguments:arguments];
+    return [self testErrorLogWithFormat:format arguments:arguments];
   }
   else if ([self isMeasurementLogWithFormat:format arguments:arguments])
   {
@@ -134,14 +149,14 @@
   }
   
   // Undetermined messages
-  return [XCTestConsoleMessage undeterminedTestLogWithFormat:format arguments:arguments];
+  return [self undeterminedTestLogWithFormat:format arguments:arguments];
 }
 
 #pragma mark - Serial Number Recorder
 
 // Find the serial number for the identifier (test case method signature).
 // This serial number will make logs more readable.
-+ (NSNumber *)testCaseNumberForIdentifier:(NSString *)identifier
+- (NSNumber *)testCaseNumberForIdentifier:(NSString *)identifier
 {
   // Use the test case method signature (the identifier) as the keys to record
   // the serial numbers (the value).
@@ -170,7 +185,7 @@
 
 #pragma mark - Log Message Implementation
 
-+ (NSString *)testSuiteStartedLogWithFormat:(NSString *)format arguments:(va_list)arguments
+- (NSString *)testSuiteStartedLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   static NSString *newFormat =
   (XCTEST_BG            @"👤 "
@@ -183,7 +198,7 @@
   return [[NSString alloc] initWithFormat:newFormat arguments:arguments];
 }
 
-+ (NSString *)testSuiteEndedLogWithFormat:(NSString *)format arguments:(va_list)arguments
+- (NSString *)testSuiteEndedLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   // Get the string of the results
   va_list ap;
@@ -249,7 +264,7 @@
                                 arguments:arguments];
 }
 
-+ (NSString *)testCaseStartedLogWithFormat:(NSString *)format arguments:(va_list)arguments
+- (NSString *)testCaseStartedLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   va_list ap;
   va_copy(ap, arguments);
@@ -267,7 +282,7 @@
   return [[NSString alloc] initWithFormat:coloredFormat, testCaseNumber, testSuiteTarget];
 }
 
-+ (NSString *)testCaseEndedLogWithFormat:(NSString *)format arguments:(va_list)arguments
+- (NSString *)testCaseEndedLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   va_list ap;
   va_copy(ap, arguments);
@@ -310,7 +325,7 @@
   return [[NSString alloc] initWithFormat:coloredFormat, testCaseNumber, results, timeInterval];
 }
 
-+ (NSString *)testErrorLogWithFormat:(NSString *)format arguments:(va_list)arguments
+- (NSString *)testErrorLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   va_list ap;
   va_copy(ap, arguments);
@@ -332,7 +347,7 @@
   return [[NSString alloc] initWithFormat:coloredFormat, testCaseNumber, reason, file, line];
 }
 
-+ (NSString *)measurementLogWithFormat:(NSString *)format arguments:(va_list)arguments
+- (NSString *)measurementLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   // Parse the measurement info values from arguments
   NSArray *constantKeywordsInMeasurementLog =
@@ -417,7 +432,7 @@
   return [NSString stringWithFormat:newFormat, testCaseNumber, preciseAverageTime, standardDeviation, relativeStandardDeviation, sample1, sample2, sample3, sample4, sample5, sample6, sample7, sample8, sample9, sample10, testLocation];
 }
 
-+ (NSString *)undeterminedTestLogWithFormat:(NSString *)format arguments:(va_list)arguments
+- (NSString *)undeterminedTestLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   NSString *formatForUndeterminedTestLog = [NSString stringWithFormat:@"❓ %@", format];
   return [[NSString alloc] initWithFormat:formatForUndeterminedTestLog arguments:arguments];
@@ -426,7 +441,7 @@
 
 #pragma mark - Measure Block
 
-+ (BOOL)isMeasurementLogWithFormat:(NSString *)format arguments:(va_list)arguments
+- (BOOL)isMeasurementLogWithFormat:(NSString *)format arguments:(va_list)arguments
 {
   if (![format isEqualToString:@"%@"]) {
     return NO;

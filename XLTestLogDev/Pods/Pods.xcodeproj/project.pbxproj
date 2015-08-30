@@ -10,9 +10,9 @@
 		13FEB9F6DDF9C2A7F4DE5A937E3BFC3B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC978AF41042082F6DC1D91804547A8 /* XCTest.framework */; };
 		76E4D4729FCA6045A19C67CFB34D1270 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FBFDEB9510FBD28573B0C5B541A12C /* Foundation.framework */; };
 		7C54F3E5B95A39A75C3E666D4E12A7D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FBFDEB9510FBD28573B0C5B541A12C /* Foundation.framework */; };
-		9AD613580498FB4EAD79640FD2E603FB /* XCTestConsoleMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5C17DAC7262973FF319E6BAAEE7444 /* XCTestConsoleMessage.m */; };
+		9AD613580498FB4EAD79640FD2E603FB /* XLTestLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5C17DAC7262973FF319E6BAAEE7444 /* XLTestLogManager.m */; };
 		C3D38DD5DF1B90F5997A440454488B22 /* Pods-XLTestLogDevTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5216459982FD9BF6E486FF4E963923 /* Pods-XLTestLogDevTests-dummy.m */; };
-		CB5C936F6F0212DDBF599800A47D7130 /* XCTestConsoleMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 213AAD133090A5126A58A26BF21A0C27 /* XCTestConsoleMessage.h */; };
+		CB5C936F6F0212DDBF599800A47D7130 /* XLTestLogManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 213AAD133090A5126A58A26BF21A0C27 /* XLTestLogManager.h */; };
 		DE8700295332A1A7F05E71EAC34F2AA7 /* XLTestLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 941CCC5B85B0F198C0EEEF9E1A323E60 /* XLTestLog-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 
 /* Begin PBXFileReference section */
 		13BF83146A3EC78AF2C36C44674BC619 /* XLTestLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XLTestLog.xcconfig; sourceTree = "<group>"; };
-		213AAD133090A5126A58A26BF21A0C27 /* XCTestConsoleMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XCTestConsoleMessage.h; sourceTree = "<group>"; };
+		213AAD133090A5126A58A26BF21A0C27 /* XLTestLogManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = XLTestLogManager.h; sourceTree = "<group>"; };
 		3B29FDC2B0987CA3AA1588101054A8D1 /* libPods-XLTestLogDevTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLTestLogDevTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C20D91553EA93338A5D2A68330484F0 /* XLTestLog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XLTestLog-prefix.pch"; sourceTree = "<group>"; };
 		5A09BE4ABFB6283FF84DB847C39C7C9B /* Pods-XLTestLogDevTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-XLTestLogDevTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		941CCC5B85B0F198C0EEEF9E1A323E60 /* XLTestLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XLTestLog-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C6B05D6AF55BE1390488E98FD29047CC /* Pods-XLTestLogDevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XLTestLogDevTests.release.xcconfig"; sourceTree = "<group>"; };
-		CD5C17DAC7262973FF319E6BAAEE7444 /* XCTestConsoleMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XCTestConsoleMessage.m; sourceTree = "<group>"; };
+		CD5C17DAC7262973FF319E6BAAEE7444 /* XLTestLogManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = XLTestLogManager.m; sourceTree = "<group>"; };
 		DB5216459982FD9BF6E486FF4E963923 /* Pods-XLTestLogDevTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XLTestLogDevTests-dummy.m"; sourceTree = "<group>"; };
 		EF5DA16027530FB3650A2707EF8F42B6 /* XLTestLog-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "XLTestLog-Private.xcconfig"; sourceTree = "<group>"; };
 		F3FBFDEB9510FBD28573B0C5B541A12C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -131,8 +131,8 @@
 		7FB01ED95BC86075CBA3416076B16978 /* XLTestLog */ = {
 			isa = PBXGroup;
 			children = (
-				213AAD133090A5126A58A26BF21A0C27 /* XCTestConsoleMessage.h */,
-				CD5C17DAC7262973FF319E6BAAEE7444 /* XCTestConsoleMessage.m */,
+				213AAD133090A5126A58A26BF21A0C27 /* XLTestLogManager.h */,
+				CD5C17DAC7262973FF319E6BAAEE7444 /* XLTestLogManager.m */,
 			);
 			path = XLTestLog;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB5C936F6F0212DDBF599800A47D7130 /* XCTestConsoleMessage.h in Headers */,
+				CB5C936F6F0212DDBF599800A47D7130 /* XLTestLogManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AD613580498FB4EAD79640FD2E603FB /* XCTestConsoleMessage.m in Sources */,
+				9AD613580498FB4EAD79640FD2E603FB /* XLTestLogManager.m in Sources */,
 				DE8700295332A1A7F05E71EAC34F2AA7 /* XLTestLog-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
