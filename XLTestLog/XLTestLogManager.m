@@ -353,7 +353,7 @@
   NSString *reason         = va_arg(ap, NSString *);
   va_end(ap);
   
-  NSNumber *testCaseNumber = [self testCaseNumberForIdentifier:testCaseTarget];
+  //NSNumber *testCaseNumber = [self testCaseNumberForIdentifier:testCaseTarget];
   
   NSString *coloredFormat =
   (XLSTYLE_WARNING    @"    ⚠️ %@\n"
