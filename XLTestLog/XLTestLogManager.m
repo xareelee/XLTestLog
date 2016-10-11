@@ -292,8 +292,8 @@
 
   NSString *coloredFormat =
   (XLSTYLE_BG    @"  🚀 "
-   XLSTYLE_SUITE @"Test Case-%@ launched\n"
-   XLSTYLE_CASE  @"      '%@'\n"
+   XLSTYLE_SUITE @"(%@) ==> "
+   XLSTYLE_CASE  @"'%@'\n"
    XCOLORS_RESET);
   
   return [[NSString alloc] initWithFormat:coloredFormat, testCaseNumber, testSuiteTarget];
@@ -315,8 +315,8 @@
   {
     coloredFormat =
     (XLSTYLE_BG    @"    ✅ "
-     XLSTYLE_SUITE @"Test Case-%@"
-     XLSTYLE_PASS  @" %s "
+     XLSTYLE_SUITE @"(%@) ==> "
+     XLSTYLE_PASS  @"%s "
      XLSTYLE_TIME  @"(%.3f seconds)\n"
      XCOLORS_RESET);
   }
@@ -324,7 +324,7 @@
   {
     coloredFormat =
     (XLSTYLE_BG    @"    💥 "
-     XLSTYLE_SUITE @"Test Case-%@"
+     XLSTYLE_SUITE @"(%@) ==> "
      XLSTYLE_FAIL  @" %s "
      XLSTYLE_TIME  @"(%.3f seconds)\n"
      XCOLORS_RESET);
@@ -356,13 +356,11 @@
   NSNumber *testCaseNumber = [self testCaseNumberForIdentifier:testCaseTarget];
   
   NSString *coloredFormat =
-  (XLSTYLE_SPECIAL_BG @"    🐞 "
-   XLSTYLE_WARNING    @"Test Case-%@ Failure Report\n"
-   XLSTYLE_WARNING    @"     ⚠️ %@\n"
-   XLSTYLE_WARNING    @"     ⚠️ %@:%lu\n"
+  (XLSTYLE_WARNING    @"    ⚠️ %@\n"
+   XLSTYLE_WARNING    @"    🐞 %@:%lu\n"
    XCOLORS_RESET);
   
-  return [[NSString alloc] initWithFormat:coloredFormat, testCaseNumber, reason, file, line];
+  return [[NSString alloc] initWithFormat:coloredFormat, reason, file, line];
 }
 
 - (NSString *)measurementLogWithFormat:(NSString *)format arguments:(va_list)arguments
