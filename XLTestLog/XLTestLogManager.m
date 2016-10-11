@@ -32,18 +32,31 @@
 #pragma clang diagnostic ignored "-Wformat-nonliteral"
 
 // =============================================================================
-// XcodeColor coloring macros
+// XcodeColors coloring macros
 #define XCOLORS_ESCAPE @"\033["
 #define XCOLORS_FG @"fg"
 #define XCOLORS_BG @"bg"
 #define XCOLORS_END @";"
+#define XCOLORS_UNUSED @""
 
-#define XCOLORS_SET_FG(color_code) XCOLORS_ESCAPE XCOLORS_FG color_code XCOLORS_END
-#define XCOLORS_SET_BG(color_code) XCOLORS_ESCAPE XCOLORS_BG color_code XCOLORS_END
-
-#define XCOLORS_RESET_FG  XCOLORS_ESCAPE XCOLORS_FG XCOLORS_END // Clear any foreground color
-#define XCOLORS_RESET_BG  XCOLORS_ESCAPE XCOLORS_BG XCOLORS_END // Clear any background color
-#define XCOLORS_RESET     XCOLORS_ESCAPE XCOLORS_END // Clear any foreground or background color
+// XcodeColors set/reset macros which will return an NSString for foreground/background.
+//
+// Those macrod will only be enabled if a preprocess macro `UseXcodeColors` is true/YES.
+#if UseXcodeColors    // enable coloring using XcodeColors
+#   define XCOLORS_SET_FG(color_code) XCOLORS_ESCAPE XCOLORS_FG color_code XCOLORS_END
+#   define XCOLORS_SET_BG(color_code) XCOLORS_ESCAPE XCOLORS_BG color_code XCOLORS_END
+#
+#   define XCOLORS_RESET_FG  XCOLORS_ESCAPE XCOLORS_FG XCOLORS_END // Clear any foreground color
+#   define XCOLORS_RESET_BG  XCOLORS_ESCAPE XCOLORS_BG XCOLORS_END // Clear any background color
+#   define XCOLORS_RESET     XCOLORS_ESCAPE XCOLORS_END // Clear any foreground or background color
+#else                 // disable coloring
+#   define XCOLORS_SET_FG(color_code) XCOLORS_UNUSED
+#   define XCOLORS_SET_BG(color_code) XCOLORS_UNUSED
+#
+#   define XCOLORS_RESET_FG  XCOLORS_UNUSED
+#   define XCOLORS_RESET_BG  XCOLORS_UNUSED
+#   define XCOLORS_RESET     XCOLORS_UNUSED
+#endif
 
 // -----------------------------------------------------------------------------
 // Coloring keywords
