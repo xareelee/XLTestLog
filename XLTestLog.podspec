@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'XLTestLog'
-  s.version      = '1.1.0'
+  s.version      = '1.2.0'
   s.license      = 'MIT'
   s.summary      = 'Styling and coloring your XCTest logs on Xcode Console.'
   s.description  = 'XLTestLog is a lightweight library to style and color your XCTest logs on Xcode console for more readability.'

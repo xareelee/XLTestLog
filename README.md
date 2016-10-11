@@ -1,12 +1,10 @@
 # XLTestLog
 
-## Notes with Xcode 8 and XLTestLog 1.1
+## Notes with Xcode 8 and XLTestLog
 
 Since [Xcode 8 killed XcodeColors](https://github.com/robbiehanson/XcodeColors/issues/88), the current way using XCTestLog on Xcode 8 is just plain texts with emoji. You could still use XCTestLog to stylish XCTest logs without coloring.
 
-XLTestLog `v1.1` will remove **"color code"** from logs if you don't privide a `UseXcodeColors == YES` preprocess macro.
-
-
+XLTestLog v1.1+ will remove **"color code"** from logs if you don't privide a `UseXcodeColors == YES` preprocess macro.
 
 
 ## Introduction
